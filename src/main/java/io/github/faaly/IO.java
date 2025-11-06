@@ -9,11 +9,6 @@ import java.io.File;                  // Import File Class
 public class IO 
 {
 
-    /*
-    * - read from file with parameters filepath/filename
-    * - throw exceptions 
-    * - filedata return as string-array
-    */
 
     public IO ()
     {
@@ -68,13 +63,6 @@ public class IO
         return false;
     }
 
-    // public void xyc(String[] fileData)
-    // {
-    //     for (String line : fileData)
-    //     {
-    //         System.out.println(line);
-    //     }
-    // }
 
 }
 

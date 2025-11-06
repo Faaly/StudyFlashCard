@@ -22,3 +22,4 @@ Thumbs.db
 
 # Text files
 *.txt
+src/main/java/io/github/faaly/IO.java
