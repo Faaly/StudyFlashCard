@@ -3,15 +3,16 @@ package io.github.faaly;
 import java.io.FileNotFoundException; // Import this class to handle errors
 import java.util.Scanner;             // Import the Scanner class to read text files
 import java.util.ArrayList;
+import java.io.Console;
 import java.io.File;                  // Import File Class
 
 public class IO 
 {
 
     /*
-    * - read from file mit parameter filepath/filename
-    * - exceptions werfen
-    * - filedata return als string-array
+    * - read from file with parameters filepath/filename
+    * - throw exceptions 
+    * - filedata return as string-array
     */
 
     public IO ()
@@ -19,7 +20,7 @@ public class IO
 
     }
 
-    public static String[] ReadFromFile(String path)
+    public String[] ReadFromFile(String path)
     {   
         ArrayList<String> lines = new ArrayList<>();
         File file = new File(path);
@@ -43,5 +44,37 @@ public class IO
 
         return lines.toArray(new String[0]);
     }
+
+    // public String InputString(String output)
+    // {
+    //     System.out.println(output);
+    //     String input = System.console().readLine();
+    //     if(input.isEmpty() || input == null || input.isBlank())
+    //     {
+    //         throw new Exception("ERROR: Input is invalid!");
+    //     }
+
+    //     return input;
+    // }
+
+    public Boolean UserWillExit(String output)
+    {
+        System.out.println(output);
+        String input = System.console().readLine();
+        char a = input.charAt(0);
+        if(a == 'y'|| a == 'Y'){
+            return true;
+        }
+        return false;
+    }
+
+    // public void xyc(String[] fileData)
+    // {
+    //     for (String line : fileData)
+    //     {
+    //         System.out.println(line);
+    //     }
+    // }
+
 }
 
