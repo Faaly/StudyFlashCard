@@ -15,14 +15,20 @@ public class Main
 
         boolean exit = false;
         do 
-        {
+        {   for(int i = 0; i < 10; i++)
+            {
             Random rand = new Random();
             int n = rand.nextInt(fileDataQuestion.length);
             
         
-            System.out.println(fileDataQuestion[n]  +  "\n\nIf you're ready, please hit enter.");
+            System.out.println("\n\nFrage: " + fileDataQuestion[n]  +  "\n\nThink about it, then please hit enter.");
             System.console().readLine();
-            System.out.println(fileDataAnswer[n]);
+            System.out.println("Antwort: " + fileDataAnswer[n] + "\n\n");
+
+            System.out.println("If you're ready for the next question, please hit enter");
+            System.console().readLine();
+            Utility.clearConsoleScreen();
+            }
             
             exit = utility.UserWillExit("Quit? (Y/N)");
         } 
