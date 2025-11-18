@@ -2,6 +2,10 @@ package io.github.faaly;
 
 public class Utility 
 {
+    public static String CSI = "\u001b[";
+
+    public static String CLEAR_SCREEN = CSI+"2J";
+
     public static void clearConsoleScreen()
     {
         try
@@ -13,6 +17,11 @@ public class Utility
         {
             System.out.println(e.getMessage());
         }
+    }
+
+    public static String clearConsoleScreenByAnsi(int row, int col)
+    {
+        return CSI+row+";"+col+"H";
     }
 
 }

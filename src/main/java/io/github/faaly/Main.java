@@ -12,7 +12,7 @@ public class Main
         String fileNameAnswer = "Answers.txt";
         String[] fileDataQuestion = utility.ReadFromFile(fileNameQuestion);
         String[] fileDataAnswer = utility.ReadFromFile(fileNameAnswer);
-
+        
         boolean exit = false;
         do 
         {   for(int i = 0; i < 10; i++)
@@ -28,6 +28,8 @@ public class Main
             System.out.println("If you're ready for the next question, please hit enter");
             System.console().readLine();
             Utility.clearConsoleScreen();
+            System.out.print(Utility.clearConsoleScreenByAnsi(1, 1));
+
             }
             
             exit = utility.UserWillExit("Quit? (Y/N)");
